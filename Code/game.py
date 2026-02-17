@@ -1,23 +1,17 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 import pygame
-
+from Code.Const import WIN_HEIGHT, WIN_WIDTH
 from Code.menu import Menu
-
 
 class Game:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode((600, 480))
+        self.running = True
+        self.window = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
+        pygame.display.set_caption("Mountain Shooter")
 
-    def run(self, ):
+    def run(self):
         while True:
             menu = Menu(self.window)
             menu.run()
             pass
 
-            # Verificar eventos
-            # for event in pygame.event.get():
-            #    if event.type == pygame.QUIT:
-            #       pygame.quit() # Fechar janela
-            #        quit() # Sair do programa
