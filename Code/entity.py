@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from abc import ABC, abstractmethod
 
-import pygame
+import pygame.image
 
 
 class Entity(ABC):
