@@ -15,9 +15,15 @@ class EntityFactory:
         match entity_name:
             case 'Level1Bg':
                 list_bg = []
-                for i in range(7):
+                for i in range(7): # level 1 tem 7 camadas de fundo
                     list_bg.append(Background(f'Level1Bg{i}', (0, 0)))
                     list_bg.append(Background(f'Level1Bg{i}', (WIN_WIDTH, 0)))
+                return list_bg
+            case 'Level2Bg':
+                list_bg = []
+                for i in range(5): # level 2 tem 5 camadas de fundo
+                    list_bg.append(Background(f'Level2Bg{i}', (0, 0)))
+                    list_bg.append(Background(f'Level2Bg{i}', (WIN_WIDTH, 0)))
                 return list_bg
             case 'Player1':
                 return Player('Player1', (10, WIN_HEIGHT / 2 - 30 ))
