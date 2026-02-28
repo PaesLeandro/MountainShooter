@@ -1,12 +1,12 @@
-from Code.Const import WIN_WIDTH
-from Code.enemy import Enemy
-from Code.enemyShot import EnemyShot
-from Code.player import Player
-from Code.playerShot import PlayerShot
-from Code.entity import Entity
+from code.Const import WIN_WIDTH
+from code.Enemy import Enemy
+from code.EnemyShot import EnemyShot
+from code.Entity import Entity
+from code.Player import Player
+from code.PlayerShot import PlayerShot
 
 
-class entityMediator:
+class EntityMediator:
 
     @staticmethod
     def __verify_collision_window(ent: Entity):
@@ -32,7 +32,7 @@ class entityMediator:
         elif isinstance(ent1, EnemyShot) and isinstance(ent2, Player):
             valid_interaction = True
 
-        if valid_interaction:
+        if valid_interaction:  # if valid_interaction == True:
             if (ent1.rect.right >= ent2.rect.left and
                     ent1.rect.left <= ent2.rect.right and
                     ent1.rect.bottom >= ent2.rect.top and
@@ -57,15 +57,15 @@ class entityMediator:
     def verify_collision(entity_list: list[Entity]):
         for i in range(len(entity_list)):
             entity1 = entity_list[i]
-            entityMediator.__verify_collision_window(entity1)
-            for j in range(i+1, len(entity_list)):
+            EntityMediator.__verify_collision_window(entity1)
+            for j in range(i + 1, len(entity_list)):
                 entity2 = entity_list[j]
-                entityMediator.__verify_collision_entity(entity1, entity2)
+                EntityMediator.__verify_collision_entity(entity1, entity2)
 
     @staticmethod
     def verify_health(entity_list: list[Entity]):
-        dead_entities = [ent for ent in entity_list if ent.health <= 0]
-        for ent in dead_entities:
-            if isinstance(ent, Enemy):
-                entityMediator.__give_score(ent, entity_list)
-            entity_list.remove(ent)
+        for ent in entity_list:
+            if ent.health <= 0:
+                if isinstance(ent, Enemy):
+                    EntityMediator.__give_score(ent, entity_list)
+                entity_list.remove(ent)

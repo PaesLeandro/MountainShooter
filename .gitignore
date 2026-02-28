@@ -1,146 +1,146 @@
-# Criado por https://www.toptal.com/developers/gitignore/api/python
-# Edite em https://www.toptal.com/developers/gitignore?templates=python
+# Created by https://www.toptal.com/developers/gitignore/api/python
+# Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 ### Python ###
-# Arquivos compilados em bytecode / otimizados / DLL
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Extensões C
-*.então
+# C extensions
+*.so
 
-# Distribuição / embalagem
+# Distribution / packaging
 .Python
-construir/
-desenvolver-ovos/
+build/
+develop-eggs/
 dist/
 downloads/
-ovos/
-.ovos/
-biblioteca/
+eggs/
+.eggs/
+lib/
 lib64/
-peças/
+parts/
 sdist/
 var/
-rodas/
-compartilhar/rodas-python/
+wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
-*.ovo
-MANIFESTO
+*.egg
+MANIFEST
 
 # PyInstaller
-Normalmente, esses arquivos são criados por um script Python a partir de um modelo.
-# Antes que o PyInstaller construa o executável, para que a data/outras informações sejam inseridas nele.
-*.manifesto
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
 *.spec
 
-# Registros do instalador
+# Installer logs
 pip-log.txt
-pip-exclua-este-diretório.txt
+pip-delete-this-directory.txt
 
-# Relatórios de teste unitário/cobertura
+# Unit test / coverage reports
 htmlcov/
 .tox/
 .nox/
-.cobertura
-.cobertura.*
+.coverage
+.coverage.*
 .cache
 nosetests.xml
-cobertura.xml
-*.cobrir
-*.py,capa
-.hipótese/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
 .pytest_cache/
-cobrir/
+cover/
 
-# Traduções
+# Translations
 *.mo
 *.pot
 
-# Coisas do Django:
-*.registro
+# Django stuff:
+*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Coisas do frasco:
-exemplo/
+# Flask stuff:
+instance/
 .webassets-cache
 
-# Coisas de Scrapy:
+# Scrapy stuff:
 .scrapy
 
-# Documentação do Sphinx
+# Sphinx documentation
 docs/_build/
 
 # PyBuilder
 .pybuilder/
-alvo/
+target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
 # IPython
-perfil_padrão/
+profile_default/
 ipython_config.py
 
 # pyenv
-# Para uma biblioteca ou pacote, talvez você queira ignorar esses arquivos, pois o código é
-# Projetado para ser executado em vários ambientes; caso contrário, faça o check-in:
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
 # .python-version
 
 # pipenv
-# De acordo com pypa/pipenv#598, é recomendável incluir Pipfile.lock no controle de versão.
-# No entanto, em caso de colaboração, se houver dependências específicas da plataforma ou dependências
-# Por não ter suporte multiplataforma, o pipenv pode instalar dependências que não funcionam ou não funcionam.
-# Instale todas as dependências necessárias.
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
 #Pipfile.lock
 
-# poesia
-Assim como o Pipfile.lock, geralmente é recomendável incluir o poetry.lock no controle de versão.
-# Isso é especialmente recomendado para pacotes binários para garantir a reprodutibilidade e é mais
-# Geralmente ignorado pelas bibliotecas.
-# https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poesia.lock
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
 
 # pdm
-Assim como o Pipfile.lock, geralmente é recomendável incluir o pdm.lock no controle de versão.
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
 #pdm.lock
-O pdm armazena configurações de todo o projeto em .pdm.toml, mas é recomendável não incluí-lo.
-# no controle de versão.
-# https://pdm.fming.dev/#use-with-ide
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
 
-# PEP 582; usado por exemplo em github.com/David-OConnor/pyflow e github.com/pdm-project/pdm
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
-# Coisas de aipo
-cronograma de batidas de aipo
+# Celery stuff
+celerybeat-schedule
 celerybeat.pid
 
-# Arquivos analisados ​​pelo SageMath
+# SageMath parsed files
 *.sage.py
 
-# Ambientes
+# Environments
 venv
 .env
 .venv
-ambiente/
+env/
 venv/
-AMBIENTE/
+ENV/
 env.bak/
 venv.bak/
 
-# Configurações do projeto Spyder
+# Spyder project settings
 .spyderproject
 .spyproject
 
-# Configurações do projeto de corda
-.projeto de corda
+# Rope project settings
+.ropeproject
 
-# Documentação mkdocs
+# mkdocs documentation
 /site
 
 # mypy
@@ -148,30 +148,31 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
-# Verificador de tipo Pyre
-.pira/
+# Pyre type checker
+.pyre/
 
-# analisador de tipo estático pytype
+# pytype static type analyzer
 .pytype/
 
-# Símbolos de depuração do Cython
+# Cython debug symbols
 cython_debug/
 
 # PyCharm
-O modelo específico da JetBrains é mantido em um arquivo JetBrains.gitignore separado que pode
-# Pode ser encontrado em https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-# e pode ser adicionado ao .gitignore global ou mesclado a este arquivo. Para uma abordagem mais drástica.
-# Opção (não recomendada): você pode descomentar a seguinte linha para ignorar toda a pasta de ideias.
-#.ideia/
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
 
-### Patch Python ###
-# Arquivo de configuração local do Poetry - https://python-poetry.org/docs/configuration/#local-configuration
-poesia.toml
+### Python Patch ###
+# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
 
-# áspero
+# ruff
 .ruff_cache/
 
-# Arquivos de configuração LSP
+# LSP config files
 pyrightconfig.json
 
-# Fim de https://www.toptal.com/developers/gitignore/api/python
+# End of https://www.toptal.com/developers/gitignore/api/python
+
